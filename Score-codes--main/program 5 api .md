@@ -1,1 +1,59 @@
-import pandas as pd # ==================== SMALL DATASET ==================== data = { 'Product': ['Laptop', 'Phone', 'Tablet', 'Headphones', 'Smartwatch'], 'Sales': [245, 189, 98, 156, 67], 'Revenue': [122500, 94500, 34300, 46800, 20100], 'Rating': [4.5, 4.2, 4.0, 4.7, 4.3] } df = pd.DataFrame(data) print("=== Original Dataset ===") print(df) print("\n" + "="*50 + "\n") # ==================== SUMMARIZE IN PYTHON ==================== summary_stats = { "Total Products": len(df), "Total Sales": df['Sales'].sum(), "Total Revenue": df['Revenue'].sum(), "Average Sales": round(df['Sales'].mean(), 1), "Average Revenue": round(df['Revenue'].mean(), 2), "Highest Rated Product": df.loc[df['Rating'].idxmax(), 'Product'], "Best Selling Product": df.loc[df['Sales'].idxmax(), 'Product'] } summary_text = ( f"Dataset Summary:\n" f"- We analyzed {summary_stats['Total Products']} products.\n" f"- Total units sold: {summary_stats['Total Sales']}\n" f"- Total revenue generated: ${summary_stats['Total Revenue']:,}\n"     f"- Average sales per product: {summary_stats['Average Sales']} units\n"     f"- Average revenue per product: ${summary_stats['Average Revenue']:,}\n"     f"- Best selling product: {summary_stats['Best Selling Product']}\n"     f"- Highest rated product: {summary_stats['Highest Rated Product']}" )  print("=== Statistical Summary ===") print(summary_text) print("\n" + "="*50 + "\n")  # ==================== MOCK AI API CALL ==================== # (In real life, you would call OpenAI, Grok, Claude, etc.) def call_ai_api(prompt):     # Simulated AI response     ai_response = (         "The dataset shows a strong performance across five consumer electronics. "         "The Laptop was the top performer with 245 units sold and $122,500 in revenue. "         "Headphones stood out with the highest customer satisfaction rating of 4.7. "         "Overall, the business generated $318,200 in total revenue with an average of "         "151 units sold per product. The data suggests that premium audio products "         "like headphones are particularly well-received by customers."     )     return ai_response  # ==================== GENERATE PLAIN ENGLISH PARAGRAPH ==================== print("=== AI-Generated Plain English Summary ===") plain_english = call_ai_api(summary_text) print(plain_english) 
+import pandas as pd
+
+# ==================== SMALL DATASET ====================
+data = {
+    'Product': ['Laptop', 'Phone', 'Tablet', 'Headphones', 'Smartwatch'],
+    'Sales': [245, 189, 98, 156, 67],
+    'Revenue': [122500, 94500, 34300, 46800, 20100],
+    'Rating': [4.5, 4.2, 4.0, 4.7, 4.3]
+}
+df = pd.DataFrame(data)
+
+print("=== Original Dataset ===")
+print(df)
+print("\n" + "="*50 + "\n")
+
+# ==================== SUMMARIZE IN PYTHON ====================
+summary_stats = {
+    "Total Products": len(df),
+    "Total Sales": df['Sales'].sum(),
+    "Total Revenue": df['Revenue'].sum(),
+    "Average Sales": round(df['Sales'].mean(), 1),
+    "Average Revenue": round(df['Revenue'].mean(), 2),
+    "Highest Rated Product": df.loc[df['Rating'].idxmax(), 'Product'],
+    "Best Selling Product": df.loc[df['Sales'].idxmax(), 'Product']
+}
+
+summary_text = (
+    f"Dataset Summary:\n"
+    f"- We analyzed {summary_stats['Total Products']} products.\n"
+    f"- Total units sold: {summary_stats['Total Sales']}\n"
+    f"- Total revenue generated: ${summary_stats['Total Revenue']:,}\n"
+    f"- Average sales per product: {summary_stats['Average Sales']} units\n"
+    f"- Average revenue per product: ${summary_stats['Average Revenue']:,}\n"
+    f"- Best selling product: {summary_stats['Best Selling Product']}\n"
+    f"- Highest rated product: {summary_stats['Highest Rated Product']}"
+)
+
+print("=== Statistical Summary ===")
+print(summary_text)
+print("\n" + "="*50 + "\n")
+
+# ==================== MOCK AI API CALL ====================
+# (In real life, you would call OpenAI, Grok, Claude, etc.)
+def call_ai_api(prompt):
+    # Simulated AI response
+    ai_response = (
+        "The dataset shows a strong performance across five consumer electronics. "
+        "The Laptop was the top performer with 245 units sold and $122,500 in revenue. "
+        "Headphones stood out with the highest customer satisfaction rating of 4.7. "
+        "Overall, the business generated $318,200 in total revenue with an average of "
+        "151 units sold per product. The data suggests that premium audio products "
+        "like headphones are particularly well-received by customers."
+    )
+    return ai_response
+
+# ==================== GENERATE PLAIN ENGLISH PARAGRAPH ====================
+print("=== AI-Generated Plain English Summary ===")
+plain_english = call_ai_api(summary_text)
+print(plain_english)

@@ -21,7 +21,7 @@ Bash
 code .
 (Alternatively, open VS Code, go to File > Open Folder, and select the source-code directory).
 
-Install Dependencies
+3. Install Dependencies
 Open the integrated terminal in VS Code (`Ctrl + `` or Terminal > New Terminal) and run the following command to install the required backend packages:
 pip install pandas matplotlib openpyxl
 

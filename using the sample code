@@ -1,0 +1,46 @@
+## 💻 How to Run the Sample Codes in VS Code
+
+Follow these steps to set up your environment and execute the project files using Visual Studio Code (VS Code):
+
+### 1. Prerequisites & Environment Setup
+Before running the code, ensure you have the necessary tools installed on your machine:
+* **Python:** Download and install Python (version 3.8 or higher is recommended) from [python.org](https://www.python.org/).
+* **VS Code Extension:** Open VS Code, go to the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`), search for **Python** (by Microsoft), and click **Install**.
+
+### 2. Clone and Open the Project
+1. Open your terminal or command prompt and clone this repository:
+   ```bash
+   git clone [https://github.com/srisrinidhi2006-tech/source-code.git](https://github.com/srisrinidhi2006-tech/source-code.git)
+Navigate into the project folder:
+
+Bash 
+cd source-code
+Open the folder in VS Code:
+
+Bash
+code .
+(Alternatively, open VS Code, go to File > Open Folder, and select the source-code directory).
+
+Install Dependencies
+Open the integrated terminal in VS Code (`Ctrl + `` or Terminal > New Terminal) and run the following command to install the required backend packages:
+pip install pandas matplotlib openpyxl
+
+4. Execute the Program
+You can run any of the sample files (such as sample code.py or sample code2.py) using either of these two methods:
+
+Method A: The Run Button (Recommended)
+In the VS Code file explorer, click on the file you want to execute (e.g., sample code.py).
+
+Look at the top-right corner of the editor interface.
+
+Click the Play button (triangle icon) that reads "Run Python File".
+
+The script will execute, and any data visualization or analysis tables will output in the terminal panel at the bottom.
+
+Method B: Via the Integrated Terminal
+Open the built-in terminal (Terminal > New Terminal).
+
+Type the python command followed by the filename wrapped in quotes (due to the space in the name) and press Enter:
+
+Bash
+python "sample code.py"

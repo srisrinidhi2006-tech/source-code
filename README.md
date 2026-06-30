@@ -93,3 +93,11 @@ python filename.py
 *Automated Excel Exporting routines
 *External API Integration architectures
 *AI-Assisted Reporting workflows
+
+### 🚀 Quick-Start Guide: Create, Save, and Run a Program in VS Code
+
+1. **Create & Open a Folder:** Create a folder on your computer (e.g., on your Desktop or D: drive). Open VS Code, go to **File > Open Folder...**, select your folder, and click **Select Folder**.
+2. **Create Your Python File:** Click the **New File** icon `+` in the left sidebar. Name your file ending with `.py` (e.g., `main.py`). Avoid using spaces in the filename.
+3. **Write & Save Code:** Paste your Python code into the empty editor window and press **Ctrl + S** (or **Cmd + S** on Mac) to save the file.
+4. **Install Dependencies (If Needed):** Open the integrated terminal (**Terminal > New Terminal**) and run any required pip commands for your script (e.g., `pip install google-generativeai`).
+5. **Run the Program:** Click the **Play button** (triangle icon) in the top-right corner of the editor interface, or type `python main.py` in your terminal and hit Enter.
